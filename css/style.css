@@ -244,28 +244,33 @@ body {
     justify-content: space-between;
     gap: 20px;
 }
+
 .about__content {
     max-width: 560px;
     display: flex;
     flex-direction: column;
 }
+
 .about__subtitle {
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 20px;
 }
+
 .about__title {
     font-size: 64px;
     font-weight: 800;
     text-transform: uppercase;
     margin-bottom: 100px;
 }
+
 .about__list {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     margin-bottom: 20px;
 }
+
 .about__item {
     font-size: 26px;
     font-weight: 700;
@@ -274,15 +279,18 @@ body {
     border-radius: 30px;
     padding: 10px 20px;
 }
+
 .about__text {
     display: flex;
     flex-direction: column;
     gap: 20px;
     margin-top: auto;
 }
+
 .about__img {
     position: relative;
 }
+
 .about__link {
     position: absolute;
     right: 68px;
@@ -326,13 +334,16 @@ body {
     flex-basis: 50%;
     gap: 10px;
 }
+
 .activities__text .buttons-book {
     align-self: start;
 }
+
 .activities__list {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
 }
+
 .activities__item {
     border: 1px solid #2B2A29;
     border-radius: 50%;
@@ -505,6 +516,27 @@ body {
     .about__content {
         flex-basis: 50%;
     }
+
+    .reviews__top {
+        margin-left: 0;
+        margin-bottom: 75px;
+    }
+
+    .reviews__items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .reviews__item:nth-child(even) {
+        padding: 0;
+    }
+
+    .reviews__img {
+        width: 100%;
+    }
+
+    .reviews__title {
+        font-size: 44px;
+    }
 }
 
 @media (max-width: 990px) {
@@ -548,7 +580,8 @@ body {
 
     .about,
     .site-images,
-    .activites {
+    .activites,
+    .reviews {
         margin-bottom: 75px;
     }
 
@@ -584,6 +617,39 @@ body {
     .activities__list {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    .footer {
+        padding: 75px 0;
+    }
+
+    .footer__title {
+        font-size: 44px;
+    }
+
+    .footer__bottom {
+        flex-wrap: wrap;
+    }
+
+    .footer__info-list {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 570px) {
+    .footer__top {
+        flex-wrap: wrap-reverse;
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .footer__title {
+        text-align: center;
+    }
+
+    .footer__info-list {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -612,7 +678,8 @@ body {
     }
 
     .about__subtitle,
-    .activities__subtitle {
+    .activities__subtitle,
+    .reviews__subtitle {
         margin-bottom: 10px;
     }
 
@@ -634,5 +701,17 @@ body {
 
     .site-images {
         display: none;
+    }
+
+    .reviews__top {
+        margin-bottom: 30px;
+    }
+
+    .reviews__title {
+        font-size: 36px;
+    }
+
+    .reviews__items {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
